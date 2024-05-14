@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif; }
+        .bg {
+            background-image: url('https://wallpapershome.com/images/pages/pic_hs/2917.jpg'); 
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .container {
+            position: absolute;
+            top: 20%; 
+            left: 5%;
+            right: 5%; 
+            bottom: 5%; 
+            background-color: rgba(255, 255, 255, 0.9); 
+            padding: 17px;
+            overflow: auto;
+        }
+        nav {
+            background-color: #bfe6ff;
+            padding: 15px 25px;
+            text-align: left;
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+            font-size: 130%;
+        }
+
+        nav a:hover {
+            color: blue;
+        }
+     nav a.active {
+    box-shadow: 0 0 10px #8cd3ff; 
+    transition: box-shadow 0.3s ease; 
+    background-color:#8cd3ff; 
+    color: #000; 
+     padding: 10px 18px;}
+
+    nav a.active:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 0 10px white; }
+
+        header {
+            background-color: #8cd2ff;
+            color: #000;
+            padding: 15px;
+            text-align: center;
+            height: 15px;
+        }
+
+        h1 {
+            text-align: left;
+            font-size: 24px; 
+            margin-top:55px;
+        }
+
+        p {
+            text-align: left;
+            font-size: 18px; 
+            margin-bottom: 10px; 
+            margin-top: 20px;
+        }
+
+        .container img {
+            float: right; 
+            margin-left: 10px; 
+            margin-bottom: 10px;         }
+    </style>
+</head>
+<body>
+    <header>
+        <h1></h1>
+    </header>
+<nav>
+    <a href="home.html" onclick="return navigateTo('home.html')">Home</a>
+    <a href="aboutus.html" class="active" onclick="return navigateTo('aboutus.html')">About Us</a>
+    <a href="contactus.html" onclick="return navigateTo('contactus.html')">Contact Us</a>
+</nav>
+
+    <div class="bg"></div>
+    <div class="container">
+        <h1>HEY THERE! WELCOME TO OUR SITE!</h1>
+        <p> Our purpose in creating this webpage is to show the beauty of Zamboanga City, showing its</p> 
+        <p> wonderful history, delicious local cuisine, infamous places, and attractive landmarks. </p> 
+        <p> We would like to warmly invite travelers all around the world to join us</p>
+       <p> and deepen their knowledge about our vibrant culture and breathtaking natural landscapes. </p>
+        <p>Join us on a journey of exploration and appreciation as we continue to discover more</p>
+        <p> within the City of Zamboanga.</p>
+        <h1>NOTE:</h1>
+        <p> We're just a bunch of high school students who made this website for a project.</p> 
+        <p> We're not pros or anything, just trying to get those good grades!</p>
+        <p> So, take a look around and hope you find what you need.</p>
+     </div>
+</body>
+</html>

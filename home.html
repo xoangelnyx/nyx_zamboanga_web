@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Website</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            background-color: #adc4dd;
+        }
+
+        header {
+            background-color: #8cd2ff;
+            color: #000;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #bfe6ff;
+            padding: 15px 25px;
+            text-align: left;
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+            font-size: 130%;
+        }
+
+        nav a:hover {
+            color: blue;
+        }
+
+        nav a.active {
+            box-shadow: 0 0 10px #8cd3ff; 
+            transition: box-shadow 0.3s ease; 
+            background-color: #8cd3ff; 
+            color: #000; 
+            padding: 10px 18px;
+        }
+
+        nav a.active:hover {
+            transform: translateY(-3px); 
+            box-shadow: 0 0 10px white; 
+        }
+
+        .main-banner img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        .scroll-banner img {
+            width: 100%;
+            height: 33vh;
+            object-fit: cover;
+        }
+
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .image-grid img {
+            width: calc(50% - 10px);
+            height: 400px; 
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .vertical-images {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            align-items: center;
+            background-color: #e6f7ff;         }
+
+     
+        .slider-container {
+            position: relative;
+            max-width: 80%; 
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: #e6f7ff; }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .slider-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .slider-controls button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+<header>
+        <h1></h1>
+    </header>
+<nav>
+    <a href="home.html" class="active">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="contactus.html">Contact Us</a>
+</nav>
+    <div class="main-banner" id="home">
+        <img src="bg1.jpg" alt="Main Banner">
+    </div>
+    <div class="scroll-banner">
+        <img src="banner1.jpg" alt="Scroll Banner 1">
+    </div>
+    <div class="image-grid">
+        <img src="place1.jpg" alt="Image 1">
+        <img src="place2.jpg" alt="Image 2">
+        <img src="place3.jpg" alt="Image 3">
+        <img src="place4.jpg" alt="Image 4">
+    </div>
+    <div class="scroll-banner">
+        <img src="banner2.jpg" alt="Scroll Banner 2">
+    </div>
+    <div class="image-grid">
+        <img src="beach1.jpg" alt="Image 5">
+        <img src="beach3.jpg" alt="Image 7">
+        <img src="beach4.jpg" alt="Image 8">
+        <img src="beach5.jpg" alt="Image 9">
+    </div>
+    <div class="scroll-banner">
+        <img src="banner3.jpg" alt="Scroll Banner 3">
+    </div>
+    <div class="slider-container">
+        <div class="slider" id="slider">
+            <div class="slide"><img src="food1.jpg" alt="Slide 1"></div>
+            <div class="slide"><img src="food2.jpg" alt="Slide 2"></div>
+            <div class="slide"><img src="food3.jpg" alt="Slide 3"></div>
+            <div class="slide"><img src="food4.jpg" alt="Slide 4"></div>
+            <div class="slide"><img src="food5.jpg" alt="Slide 5"></div>
+        </div>
+        <div class="slider-controls">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            const slider = document.getElementById('slider');
+            slider.style.transform = `translateX(${-currentSlide * 100}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide);
+            setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
+        });
+    </script>
+</body>
+</html>

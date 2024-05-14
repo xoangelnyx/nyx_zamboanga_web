@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .bg {
+            background-image: url('rizal.jpg');
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .container {
+            position: absolute;
+            top: 20%; 
+            left: 5%; 
+            right: 5%;
+            bottom: 5%;
+            background-color: rgba(255, 255, 255, 0.9); 
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .left-side {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .right-side {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .author-profile {
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+        .author-profile h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+
+        }
+        .author-profile p {
+            margin-bottom: 5px;
+            font-size: 18px;
+            color: #666;
+        }
+        .author-profile hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 10px 0;
+        }
+        .form-container {
+            width: 100%;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+       
+        }
+        .form-container input[type="text"],
+        .form-container textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #8cd3ff;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #333;
+        }
+        .form-container input[type="submit"] {
+            background-color: #8cd3ff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: calc(100% - 20px);
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #6db8ff;
+        }
+        nav {
+            background-color: #bfe6ff;
+            padding: 15px 25px;
+            text-align: left;
+        }
+        nav a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+            font-size: 130%;
+        }
+        nav a:hover {
+            color: blue;
+        }
+        nav a.active {
+            box-shadow: 0 0 10px #8cd3ff; 
+            transition: box-shadow 0.3s ease; 
+            background-color:#8cd3ff; 
+            color: #000; 
+            padding: 10px 18px;
+        }
+        nav a.active:hover {
+            transform: translateY(-3px); 
+            box-shadow: 0 0 10px white; 
+        }
+        header {
+            background-color: #8cd2ff;
+            color: #000;
+            padding: 15px;
+            text-align: center;
+            height: 15px;
+        }
+    </style>
+</head>
+<body>
+<header>
+        <h1></h1>
+    </header>
+<nav>
+    <a href="home.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="contactus.html" class="active">Contact Us</a>
+</nav>
+    <div class="bg"></div>
+    <div class="container">
+        <div class="left-side">
+            <div class="form-container">
+                <h2>Contact Us</h2>
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required><br>
+                    <input type="text" name="email" placeholder="Your Email" required><br>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="author-profile">
+                <h2 >Authors</h2>
+                <p>Name: Nyx Angel L. Saavedra</p>
+                <p>Age: 13</p>
+                <p>Email: NyxSaavedra17@gmail.com</p>
+                <p>Contact Number: 09759503689</p>
+                <hr>
+            </div>
+            <div class="author-profile">
+                <p>Name: Threena Joice F. Corpin</p>
+                <p>Age: 14</p>
+                <p>Email: ThreenaCorpin@gmail.com</p>
+                <p>Contact Number: 0987654321</p>
+                <hr>
+            </div>
+            <div class="author-profile">
+                <p>Name: KristJane S. Ledesma</p>
+                <p>Age: 14</p>
+                <p>Email: KristaLedesma12@gmail.com</p>
+                <p>Contact Number: 0987656493</p>
+                <hr>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
